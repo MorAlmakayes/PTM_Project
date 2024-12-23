@@ -1,0 +1,41 @@
+package graph;
+import java.util.ArrayList;
+
+public class Topic {
+    public final String name;
+    protected ArrayList<Agent> subs;
+    protected ArrayList<Agent> pubs;
+
+    Topic(String name){
+        this.name=name;
+        this.subs=new ArrayList<>();
+        this.pubs=new ArrayList<>();
+    }
+
+    public Topic getTopic(String name){
+        return this;
+    }
+
+    public void subscribe(Agent a){
+        subs.add(a);
+    }
+    public void unsubscribe(Agent a){
+        subs.remove(a);
+    }
+
+    public void publish(Message m){
+        for(Agent a : subs){
+            a.callback(this.name,m);
+        }
+    }
+
+    public void addPublisher(Agent a){
+        pubs.add(a);
+    }
+
+    public void removePublisher(Agent a){
+        pubs.remove(a);
+    }
+
+
+}
