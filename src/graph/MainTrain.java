@@ -3,7 +3,7 @@ import java.util.Random;
 
 import graph.TopicManagerSingleton.TopicManager;
 
-public class MainTrain { // simple tests to get you going...
+public class MainTrain {
 
 
     public static void testMessage() {
@@ -29,6 +29,7 @@ public class MainTrain { // simple tests to get you going...
     public static  abstract class AAgent implements Agent{
         public void reset() {}
         public void close() {}
+
         public String getName(){
             return getClass().getName();
         }

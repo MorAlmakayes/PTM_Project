@@ -6,11 +6,10 @@ import java.util.concurrent.ConcurrentHashMap;
 public class TopicManagerSingleton {
 
 
-
     public static class TopicManager{
 
-        public static final TopicManager instance = new TopicManager();
-        public static final ConcurrentHashMap<String, Topic> topics = new ConcurrentHashMap<>();
+        private static final TopicManager instance = new TopicManager();
+        private static ConcurrentHashMap<String, Topic> topics = new ConcurrentHashMap<>();
 
         public static Topic getTopic(String topicName){
             return topics.computeIfAbsent(topicName,Topic:: new);

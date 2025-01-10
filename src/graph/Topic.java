@@ -5,6 +5,7 @@ public class Topic {
     public final String name;
     protected ArrayList<Agent> subs;
     protected ArrayList<Agent> pubs;
+    protected Message msg;
 
     Topic(String name){
         this.name=name;
@@ -24,6 +25,7 @@ public class Topic {
     }
 
     public void publish(Message m){
+        msg=m;
         for(Agent a : subs){
             a.callback(this.name,m);
         }
@@ -37,5 +39,8 @@ public class Topic {
         pubs.remove(a);
     }
 
+    public Message getMsg(){
+        return msg;
+    }
 
 }
