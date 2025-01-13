@@ -1,5 +1,6 @@
 package graph;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Topic {
     public final String name;
@@ -43,4 +44,10 @@ public class Topic {
         return msg;
     }
 
+    public List<Agent> getSubs() {
+        return subs;
+    }
+    public List<Agent> getPubs() {
+        return pubs;
+    }
 }
