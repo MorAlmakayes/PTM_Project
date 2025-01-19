@@ -13,7 +13,7 @@ public class MainTrain {
     public static void main(String[] args) {
         int c=Thread.activeCount();
         GenericConfig gc=new GenericConfig();
-        gc.setConfFile("test/simple.conf");
+        gc.setConfFile("/Users/moralmakayes/Desktop/PTM_Project/src/test/simple.conf");
         gc.create();
 
         if(Thread.activeCount()!=c+2){

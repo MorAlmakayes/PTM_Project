@@ -16,6 +16,7 @@ public class GenericConfig implements Config {
 
     public GenericConfig() {
         this.agents = new ArrayList<>();
+        this.confFile = "";
     }
 
     @Override
