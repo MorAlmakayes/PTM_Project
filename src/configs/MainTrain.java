@@ -1,6 +1,5 @@
 package configs;
 
-import configs.GenericConfig;
 import graph.Agent;
 import graph.Message;
 import graph.TopicManagerSingleton;
